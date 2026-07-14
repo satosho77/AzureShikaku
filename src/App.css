@@ -1,4 +1,10 @@
-﻿.app-shell {
+﻿*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.app-shell {
   position: relative;
   width: 100%;
   max-width: 100%;

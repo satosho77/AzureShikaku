@@ -689,26 +689,31 @@
   }
 }
 /* iPhone 17 / 17 Pro / 15 Pro / 16 Pro 付近 */
-@media (max-width: 430px) {
+/* 450px以下（iPhone系全般） */
+@media (max-width: 450px) {
   .app-shell {
-    padding: 12px 6px 32px;
+    padding: 16px 6px 32px;
   }
 
   .page-layout {
-    gap: 20px;
+    gap: 18px;
     padding-inline: 0;
   }
 
   .hero-panel,
   .summary-card,
-  .resource-panel,
-  .section-card {
+  .resource-panel {
     padding: 16px;
     border-radius: 18px;
   }
 
+  .hero-badge {
+    padding: 10px 14px;
+    font-size: 0.8rem;
+  }
+
   .hero-panel h1 {
-    font-size: clamp(1.5rem, 5vw, 2rem);
+    font-size: clamp(1.6rem, 5vw, 2.1rem);
     line-height: 1.1;
   }
 
@@ -717,14 +722,15 @@
     line-height: 1.6;
   }
 
+  /* 上部タブ */
   .segmented-control {
-    padding: 6px 8px;
+    padding: 4px;
     gap: 4px;
   }
 
   .segmented-button {
-    min-width: 80px;
-    padding: 8px 10px;
+    min-width: 76px;
+    padding: 8px 6px;
   }
 
   .segmented-button .segmented-label {
@@ -732,12 +738,18 @@
   }
 
   .segmented-button .segmented-sub {
-    font-size: 0.65rem;
+    font-size: 0.62rem;
+  }
+
+  .summary-grid,
+  .resource-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .summary-item {
     padding: 12px;
-    min-height: 80px;
+    min-height: 72px;
   }
 
   .summary-item p {
@@ -745,11 +757,11 @@
   }
 
   .summary-item strong {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
   .resource-header h2 {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
 
   .resource-header p {
@@ -761,11 +773,11 @@
   }
 
   .resource-card strong {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 
   .resource-card span {
-    font-size: 0.75rem;
+    font-size: 0.78rem;
   }
 
   .sections-grid {
@@ -780,20 +792,24 @@
   }
 
   .section-card h2 {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .section-detail {
     font-size: 0.75rem;
-    line-height: 1.5;
   }
 
   .module-link {
     padding: 8px;
+    gap: 4px;
     font-size: 0.72rem;
   }
 
   .module-link span:first-child {
+    font-size: 0.72rem;
+  }
+
+  .link-arrow {
     font-size: 0.72rem;
   }
 }

@@ -689,7 +689,7 @@
   }
 }
 /* iPhone 17 / 17 Pro / 15 Pro / 16 Pro 付近 */
-@media (max-width: 440px) {
+@media (max-width: 460px) {
   .app-shell {
     padding: 20px 10px 40px;
   }

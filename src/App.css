@@ -688,7 +688,115 @@
     line-height: 1.5;
   }
 }
+/* iPhone 17 / 17 Pro / 15 Pro / 16 Pro 付近 */
+@media (max-width: 430px) {
+  .app-shell {
+    padding: 20px 10px 40px;
+  }
 
+  .page-layout {
+    gap: 20px;
+    padding-inline: 0;
+  }
+
+  .hero-panel,
+  .summary-card,
+  .resource-panel,
+  .section-card {
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .hero-panel h1 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    line-height: 1.1;
+  }
+
+  .hero-copy {
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
+
+  .segmented-control {
+    padding: 6px 8px;
+    gap: 4px;
+  }
+
+  .segmented-button {
+    min-width: 80px;
+    padding: 8px 10px;
+  }
+
+  .segmented-button .segmented-label {
+    font-size: 0.85rem;
+  }
+
+  .segmented-button .segmented-sub {
+    font-size: 0.65rem;
+  }
+
+  .summary-item {
+    padding: 12px;
+    min-height: 80px;
+  }
+
+  .summary-item p {
+    font-size: 0.8rem;
+  }
+
+  .summary-item strong {
+    font-size: 0.9rem;
+  }
+
+  .resource-header h2 {
+    font-size: 1.1rem;
+  }
+
+  .resource-header p {
+    font-size: 0.8rem;
+  }
+
+  .resource-card {
+    padding: 12px;
+  }
+
+  .resource-card strong {
+    font-size: 0.8rem;
+  }
+
+  .resource-card span {
+    font-size: 0.75rem;
+  }
+
+  .sections-grid {
+    gap: 8px;
+  }
+
+  .section-card {
+    flex: 0 0 200px;
+    width: 200px;
+    min-height: 240px;
+    padding: 14px;
+  }
+
+  .section-card h2 {
+    font-size: 1rem;
+  }
+
+  .section-detail {
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+
+  .module-link {
+    padding: 8px;
+    font-size: 0.72rem;
+  }
+
+  .module-link span:first-child {
+    font-size: 0.72rem;
+  }
+}
 /* iPhone SE / 375px 対応 */
 @media (max-width: 390px) {
   .app-shell {

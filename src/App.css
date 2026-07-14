@@ -82,6 +82,110 @@
   line-height: 1.85;
 }
 
+.top-shell {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.segmented-control {
+  position: relative;
+  display: flex;
+  gap: 6px;
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto 6px auto;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 12px;
+  touch-action: pan-x;
+  scroll-behavior: smooth;
+  flex-wrap: nowrap;
+}
+
+.segmented-control::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: 999px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+
+.segmented-indicator {
+  position: absolute;
+  top: 6px;
+  height: calc(100% - 12px);
+  background: linear-gradient(90deg, rgba(99, 102, 241, 0.18), rgba(59, 130, 246, 0.14));
+  border-radius: 999px;
+  left: 0;
+  width: 0;
+  transition: left 260ms cubic-bezier(.2, .9, .2, 1), width 260ms cubic-bezier(.2, .9, .2, 1), background 220ms ease;
+  will-change: left, width;
+  pointer-events: none;
+}
+
+.segmented-button {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 10px 14px;
+  background: transparent;
+  border: none;
+  color: rgba(15, 23, 42, 0.95);
+  cursor: pointer;
+  border-radius: 999px;
+  transition: color 180ms ease, transform 180ms ease;
+  font-weight: 600;
+  white-space: nowrap;
+  scroll-snap-align: center;
+  min-width: 90px;
+}
+
+.segmented-button .segmented-label {
+  font-size: 0.95rem;
+}
+
+.segmented-button .segmented-sub {
+  font-size: 0.7rem;
+  opacity: 0.65;
+}
+
+.segmented-button:hover {
+  transform: translateY(-2px);
+}
+
+.segmented-button.active {
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+
+.segmented-button.active .segmented-sub {
+  color: rgba(255, 255, 255, 0.95);
+  opacity: 0.95;
+  font-weight: 600;
+}
+
+.segmented-button.active .segmented-label {
+  font-weight: 800;
+}
+
+.segmented-button:focus-visible {
+  outline: 3px solid rgba(99, 102, 241, 0.28);
+  outline-offset: 2px;
+  border-radius: 999px;
+}
 
 .summary-card,
 .resource-panel {
@@ -185,6 +289,14 @@
   border: 1px solid rgba(229, 231, 235, 0.92);
   box-shadow: 0 20px 54px rgba(15, 23, 42, 0.08);
   overflow: hidden;
+}
+
+/* Ensure section cards share the same height so module links align */
+.section-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 360px;
 }
 
 .section-header {
@@ -297,15 +409,19 @@
 }
 
 .resource-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   border-radius: 24px;
-  padding: 24px;
+  padding: 20px;
   background: #ffffff;
-  border: 1px solid rgba(148, 163, 184, 0.16);
+  border: 1px solid rgba(148, 163, 184, 0.12);
   color: #0f172a;
   text-decoration: none;
-  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  min-height: 0;
 }
 
 .resource-card:hover {
@@ -327,13 +443,18 @@
 .resource-card strong {
   display: block;
   margin-bottom: 10px;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
+  width: 100%;
+  text-align: center;
 }
 
 .resource-card span {
   color: #475569;
-  line-height: 1.8;
+  line-height: 1.6;
   white-space: pre-line;
+  flex: 0 0 auto;
+  width: 100%;
+  text-align: center;
 }
 
 @media (max-width: 1040px) {
@@ -409,6 +530,25 @@
     max-width: 100%;
   }
 
+  .exam-tabs {
+    gap: 8px;
+    padding: 10px;
+    border-radius: 18px;
+  }
+
+  .exam-tab {
+    padding: 10px 12px;
+    border-radius: 12px;
+  }
+
+  .exam-tab-code {
+    font-size: 0.85rem;
+  }
+
+  .exam-tab-name {
+    font-size: 0.7rem;
+  }
+
   .hero-badge {
     width: fit-content;
   }
@@ -463,13 +603,26 @@
   }
 
   .resource-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: center;
+    text-align: center;
     border-radius: 16px;
     padding: 12px;
+    min-height: 0;
+  }
+
+  .resource-card strong,
+  .resource-card span {
+    width: 100%;
+    text-align: center;
   }
 
   .resource-card span {
     font-size: 0.8rem;
     white-space: pre-line;
+    flex: 0 0 auto;
   }
 
   .resource-card:first-child {
@@ -504,6 +657,7 @@
     width: 220px;
     padding: 14px;
     border-radius: 18px;
+    min-height: 260px;
   }
 
   .section-header {

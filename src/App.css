@@ -20,20 +20,25 @@
     radial-gradient(circle at 52% 88%, rgba(168, 85, 247, 0.12), transparent 16%);
 }
 
+
 .page-layout {
   position: relative;
   width: 100%;
-  max-width: 1120px;
   min-width: 0;
   box-sizing: border-box;
-  margin: 0 auto;
+
+  /* 削除 */
+  /* max-width: 1120px; */
+  /* margin: 0 auto; */
+
   display: grid;
   gap: 36px;
   justify-items: stretch;
   align-items: stretch;
-  padding-inline: 10px;
+  padding-inline: 24px;
   grid-auto-rows: minmax(0, auto);
 }
+
 
 .hero-panel {
   position: relative;

@@ -190,8 +190,20 @@ const studyGuides: Record<TabKey, StudyGuide> = {
             url: 'https://learn.microsoft.com/ja-jp/training/modules/create-configure-manage-identities/',
           },
           {
+            title: 'Azureのコアアーキテクチャコンポーネントについて説明する',
+            url: 'https://learn.microsoft.com/ja-jp/training/modules/describe-core-architectural-components-of-azure/',
+          },
+          {
             title: 'Azure Policyイニシアチブ',
             url: 'https://learn.microsoft.com/ja-jp/training/modules/sovereignty-policy-initiatives/',
+          },
+          {
+            title: 'Azure RBACでAzureリソースを保護する',
+            url: 'https://learn.microsoft.com/ja-jp/training/modules/secure-azure-resources-with-rbac/',
+          },
+          {
+            title: 'Microsoft Entraセルフサービスパスワードリセットでユーザーにパスワードをリセットさせる',
+            url: 'https://learn.microsoft.com/ja-jp/training/modules/allow-users-reset-their-password/',
           },
         ],
         detail: 'Microsoft Entra ID、RBAC、Azure Policy、管理グループ、コスト管理など、ID とガバナンスの運用基盤を学びます。',
@@ -213,6 +225,10 @@ const studyGuides: Record<TabKey, StudyGuide> = {
             title: 'Azure Storageセキュリティの構成',
             url: 'https://learn.microsoft.com/ja-jp/training/modules/configure-storage-security/',
           },
+          {
+            title: 'Azure Filesの構成',
+            url: 'https://learn.microsoft.com/ja-jp/training/modules/configure-azure-files-file-sync/',
+          },
         ],
         detail: 'ストレージアカウント、Blob、ファイル共有、セキュリティ、SAS やアクセスキーの管理などを整理します。',
       },
@@ -233,6 +249,14 @@ const studyGuides: Record<TabKey, StudyGuide> = {
             title: 'Azure App Serviceプランの構成',
             url: 'https://learn.microsoft.com/ja-jp/training/modules/configure-app-service-plans/',
           },
+          {
+            title: 'Azure App Serviceの構成',
+            url: 'https://learn.microsoft.com/ja-jp/training/modules/configure-azure-app-services/',
+          },
+          {
+            title: 'Azure Container Instancesの構成',
+            url: 'https://learn.microsoft.com/ja-jp/training/modules/configure-azure-container-instances/',
+          },
         ],
         detail: '仮想マシン、App Service、コンテナを含む Azure コンピューティング基盤を構築・管理する力を養います。',
       },
@@ -250,8 +274,28 @@ const studyGuides: Record<TabKey, StudyGuide> = {
             url: 'https://learn.microsoft.com/ja-jp/training/modules/configure-network-security-groups/',
           },
           {
+            title: 'Azure DNSでドメインをホストする',
+            url: 'https://learn.microsoft.com/ja-jp/training/modules/host-domain-azure-dns/',
+          },
+          {
             title: 'Azure 仮想ネットワーク ピアリングの構成',
             url: 'https://learn.microsoft.com/ja-jp/training/modules/configure-vnet-peering/',
+          },
+          {
+            title: 'ルートによるAzureデプロイのトラフィックフロー管理',
+            url: 'https://learn.microsoft.com/ja-jp/training/modules/control-network-traffic-flow-with-routes/',
+          },
+          {
+            title: 'Azure Load Balancerの概要',
+            url: 'https://learn.microsoft.com/ja-jp/training/modules/intro-to-azure-load-balancer/',
+          },
+          {
+            title: 'Azure Application Gatewayの概要',
+            url: 'https://learn.microsoft.com/ja-jp/training/modules/intro-to-azure-application-gateway/',
+          },
+          {
+            title: 'Azure Network Watcherの概要',
+            url: 'https://learn.microsoft.com/ja-jp/training/modules/intro-to-azure-network-watcher/',
           },
         ],
         detail: 'VNet、NSG、DNS、ピアリング、ロードバランサーなどの仮想ネットワーク設計と実装をカバーします。',

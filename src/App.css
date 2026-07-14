@@ -81,7 +81,7 @@
 
 .hero-copy {
   margin: 0;
-  max-width: 760px;
+  max-width: none;
   color: #475569;
   font-size: 1rem;
   line-height: 1.85;
@@ -98,8 +98,8 @@
   display: flex;
   gap: 6px;
   width: 100%;
-  max-width: 920px;
-  margin: 0 auto 6px auto;
+  max-width: none;
+
   padding: 6px 12px;
   border-radius: 999px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
@@ -686,5 +686,177 @@
     margin: 0 0 12px;
     font-size: 0.8rem;
     line-height: 1.5;
+  }
+}
+
+/* iPhone SE / 375px 対応 */
+@media (max-width: 390px) {
+  .app-shell {
+    padding: 16px 8px 32px;
+  }
+
+  .page-layout {
+    gap: 16px;
+    padding-inline: 0;
+  }
+
+  .hero-panel,
+  .summary-card,
+  .resource-panel,
+  .section-card {
+    padding: 12px;
+    border-radius: 14px;
+  }
+
+  .hero-badge {
+    padding: 8px 12px;
+    font-size: 0.75rem;
+    margin-bottom: 8px;
+  }
+
+  .hero-panel h1 {
+    font-size: 1.4rem;
+    line-height: 1.15;
+  }
+
+  .hero-copy {
+    font-size: 0.72rem;
+    line-height: 1.5;
+    padding-inline: 0;
+  }
+
+  .segmented-control {
+    padding: 4px 6px;
+    gap: 4px;
+  }
+
+  .segmented-button {
+    min-width: 72px;
+    padding: 8px;
+  }
+
+  .segmented-button .segmented-label {
+    font-size: 0.78rem;
+  }
+
+  .segmented-button .segmented-sub {
+    font-size: 0.58rem;
+  }
+
+  .summary-grid,
+  .resource-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .summary-item {
+    padding: 10px;
+    min-height: 60px;
+  }
+
+  .summary-item p {
+    font-size: 0.75rem;
+  }
+
+  .summary-item strong {
+    font-size: 0.85rem;
+  }
+
+  .summary-note {
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 12px;
+  }
+
+  .summary-note h2 {
+    font-size: 0.9rem;
+  }
+
+  .summary-note p {
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+
+  .resource-header {
+    margin-bottom: 8px;
+  }
+
+  .resource-header h2 {
+    font-size: 0.95rem;
+  }
+
+  .resource-header p {
+    font-size: 0.72rem;
+    line-height: 1.5;
+  }
+
+  .resource-card {
+    padding: 10px;
+    border-radius: 12px;
+  }
+
+  .resource-card strong {
+    font-size: 0.72rem;
+  }
+
+  .resource-card span {
+    font-size: 0.72rem;
+  }
+
+  .sections-scroll {
+    padding-bottom: 6px;
+    margin-bottom: -6px;
+  }
+
+  .sections-grid {
+    gap: 8px;
+  }
+
+  .section-card {
+    flex: 0 0 180px;
+    width: 180px;
+    min-height: 220px;
+    padding: 12px;
+    border-radius: 14px;
+  }
+
+  .section-header {
+    gap: 8px;
+    padding-left: 8px;
+    margin-bottom: 8px;
+  }
+
+  .section-tag {
+    padding: 4px 8px;
+    font-size: 0.68rem;
+  }
+
+  .section-card h2 {
+    font-size: 0.9rem;
+  }
+
+  .section-detail {
+    font-size: 0.72rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+
+  .module-list {
+    gap: 8px;
+  }
+
+  .module-link {
+    padding: 6px 8px;
+    gap: 4px;
+    border-radius: 8px;
+    font-size: 0.65rem;
+  }
+
+  .module-link span:first-child {
+    font-size: 0.65rem;
+  }
+
+  .link-arrow {
+    font-size: 0.65rem;
   }
 }
